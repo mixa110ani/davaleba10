@@ -54,7 +54,6 @@ height: 42px;
     
     width: 1440px;
     height: 606px;
-    margin: auto;
     margin-top: 84px;
     margin-bottom: 84px;
     background-image: url(../images/beach.png);
@@ -81,9 +80,6 @@ height: 42px;
     font-family: Helvetica;
 font-size: 79px;
 font-weight: 700;
-position: absolute;
-left: 407px;
-top: 238px;
 z-index: 3;
 color:  #FFFFFF;
 
@@ -93,9 +89,6 @@ color:  #FFFFFF;
 font-family: Helvetica;
 font-size: 19px;
 font-weight: 700;
-position: absolute;
-left: 553px;
-top: 360px;
 z-index: 3;
 color:  #FFFFFF;
 }
@@ -190,4 +183,11 @@ font-size: 18px;
 font-weight: 400;
 color: #636060;
 
+}
+
+
+.magari{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
