@@ -9,16 +9,31 @@ header{
     height: 8%;
     position: fixed;
     z-index: 10;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: row-reverse;
-    align-items: center;
-   justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+   -webkit-box-pack: space-evenly;
+       -ms-flex-pack: space-evenly;
+           justify-content: space-evenly;
     
     
 
 }
+i{
+    display:none !important;
+    
+  }
 
 header>nav, ul, li>img{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
    
     
@@ -26,6 +41,8 @@ header>nav, ul, li>img{
 
 ul{
     list-style-type: none;
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
 
 
@@ -50,69 +67,80 @@ height: 42px;
 
 }
 
-.imga{
-    
-    width: 1440px;
-    height: 606px;
-    margin-top: 84px;
-    margin-bottom: 84px;
-    background-image: url(../images/beach.png);
-    background-repeat: no-repeat;
-    background-size: 1440px 606px;
-    z-index: 2;
-    position: relative;
-    display: flex;
 
-    
-}
-
-.imga > div{
-    display: flex
-;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-
-.imga > div> h1{
-    font-family: Helvetica;
-font-size: 79px;
-font-weight: 700;
-z-index: 3;
-color:  #FFFFFF;
-
-}
-
-.imga > div > p{
-font-family: Helvetica;
-font-size: 19px;
-font-weight: 700;
-z-index: 3;
-color:  #FFFFFF;
-}
 
 
 .flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 100%;
     margin:auto;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
 
 
     
 }
+
+
+.imga {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 84px auto;
+    width: 70%;
+    height: 50vh;
+    background-image: url(../images/beach.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #FFF;
+    padding: 100px 20px;
+}
+
+.imga > div >h1 {
+    font-family: Helvetica;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.imga > div > p {
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 
 .discover{
     width: 12%;
     height: 100%;
  padding: 5px;
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
-flex-direction: column;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
 }
 
 .discover > h1{
@@ -145,9 +173,14 @@ margin-bottom: 37px;
 .cards{
     height: 900px;
     width: 1205px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 
@@ -186,8 +219,126 @@ color: #636060;
 }
 
 
-.magari{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
+@media only screen and (max-width: 1024px) {
+    
+    
+    .imga{
+        width: 962px;      
+        height: 300px;
+      }
+
+      .flex{
+        width: 960px;     
+        height: 300px;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+      }
+      .flex > .discover{
+        height: 80px;
+        width: 700px;
+        text-align: center;
+      }
+
+      .flex > .cards{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: 100px;
+        
+      }
+
+      .flex > .cards > .card1{
+        margin-bottom: 56px;
+      }
+
+      
+  }
+@media only screen and (max-width: 768px) {
+    nav > ul{
+        display:none;
+    }
+    nav > i{
+        display:inline-block !important;
+    }
+    .imga{
+        width:700px;
+        height: 300px;
+      }
+
+      .flex{
+        width:600px;
+        height: 300px;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
+      }
+      .flex > .discover{
+        height: 80px;
+        width: 700px;
+        text-align: center;
+      }
+
+      .flex > .cards{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: 100px;
+        
+      }
+
+      .flex > .cards > .card1{
+        margin-bottom: 56px;
+      }
+
+      
+  }
+
+  @media only screen and (max-width: 480px) {
+    nav > ul{
+        display:none;
+    }
+    nav > i{
+        display:inline-block !important;
+    }
+    .imga{
+        width: 350px;
+        height: 200px;
+      }
+
+      .flex{
+        max-width:300px;
+        height: 400px;
+        
+      }
+      .flex > .discover{
+        height: 40px;
+        width: 350px;
+        margin-right: 5px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        
+      }
+
+      .flex > .cards > .card1 > img{
+        max-width: 300px;
+        height: 150px;
+      }
+
+      .flex > .cards > .card1 > p{
+        display: none;
+
+    
+
+      }
+
+      .discover> p, h1, h2{
+
+        font-size: 20px;
+
+      }
+
+      
+      
+
+      
+  }
